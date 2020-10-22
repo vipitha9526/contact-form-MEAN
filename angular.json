@@ -24,7 +24,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": []
           },
@@ -119,6 +120,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angularUI"
+    }
+  },
+  "defaultProject": "angularUI",
+  "cli": {
+    "analytics": "0413a648-3435-4eb0-9aa5-bf896fbfdba2"
+  }
 }

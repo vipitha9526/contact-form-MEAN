@@ -1,0 +1,53 @@
+<section class="dashboard_section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+        <div class="breadcrumb_section">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+              <li class="breadcrumb-item active">Contact</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-11 col-sm-6">
+        <h2>
+          contact list
+        </h2>
+      </div>
+      <div><button type="button" class="btn btn-info float-right" (click)="onAdd()">ADD</button></div>
+      <!-- <a class="btn-outline-primary" (click)="onAdd()"> add </a> -->
+    </div>
+    <div class="row">
+      <table class="table table-dark">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">NikeName</th>
+            <th scope="col">Mobile</th>
+            <th scope="col">E-mail</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of contactList;let i=index;">
+            <th scope="row">{{i + 1}}</th>
+            <td>{{data.name}}</td>
+            <td>{{data.nikename}}</td>
+            <td>{{data.mobile}}</td>
+            <td>{{data.email}}</td>
+            <td><span class="text-primary">Edit</span> &nbsp; &nbsp; <span class="text-danger">delete</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>

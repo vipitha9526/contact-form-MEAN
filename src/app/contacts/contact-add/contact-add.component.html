@@ -1,0 +1,82 @@
+<section class="dashboard_section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+        <div class="breadcrumb_section">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+              <li class="breadcrumb-item"><a routerLink="/contact">Contact</a></li>
+              <li class="breadcrumb-item active">Contact Add</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="form4 top">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7 col-md-offset-2">
+          <div class="text-center">
+            <h3><i><u>Contact</u></i></h3>
+          </div>
+          <div class="form-bg">
+            <form class="form" [formGroup]="formGroupAdd" (ngSubmit)="onSubmit()">
+              <div class="form-group"> <label class="sr-only">Name</label> <input type="text" class="form-control"
+                  formControlName="name" placeholder="Your Name">
+                <div *ngIf="submitted && formGroupAdd.get('name').invalid ">
+                  <small *ngIf="hasError('name','required')" class="text-danger">
+                    name is required
+                  </small>
+                  <small *ngIf="hasError('name','minLength')" class="text-danger">
+                    name is required minimum 3 cheractors
+                  </small>
+                </div>
+              </div>
+              <div class="form-group"> <label class="sr-only">NikeName</label> <input type="text" class="form-control"
+                  formControlName="nikename" placeholder="Your NikeName">
+                <div *ngIf="submitted && formGroupAdd.get('nikename').invalid ">
+                  <small *ngIf="hasError('nikename','required')" class="text-danger">
+                    nikename is required
+                  </small>
+                  <small *ngIf="hasError('nikename','whitespace')" class="text-danger">
+                    nikename is required
+                  </small>
+                </div>
+              </div>
+              <div class="form-group"> <label class="sr-only">Mobile</label> <input type="text" class="form-control"
+                  formControlName="mobile" placeholder="Your mobile number">
+                <div *ngIf="submitted && formGroupAdd.get('mobile').invalid ">
+                  <small *ngIf="hasError('mobile','required')" class="text-danger">
+                    Mobile is required
+                  </small>
+                  <small *ngIf="hasError('mobile','whitespace')" class="text-danger">
+                    Mobile is required
+                  </small>
+                </div>
+              </div>
+              <div class="form-group"> <label class="sr-only">Email</label> <input type="email" class="form-control"
+                  formControlName="email" placeholder="Email Address">
+                <div *ngIf="submitted && formGroupAdd.get('email').invalid ">
+                  <small *ngIf="hasError('email','required')" class="text-danger">
+                    Email is required
+                  </small>
+                  <small *ngIf="hasError('email','whitespace')" class="text-danger">
+                    Email is required
+                  </small>
+                  <small *ngIf="hasError('email','email')" class="text-danger">
+                    Email must be a valid email address
+                  </small>
+                </div>
+              </div>
+              <button type="submit" class="btn text-center btn-blue">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

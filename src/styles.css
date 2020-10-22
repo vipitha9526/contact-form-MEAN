@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+.breadcrumb_section {
+  float: left;
+  width: 100%
+}
+
+.breadcrumb_section .breadcrumb {
+  background: none;
+  font-size: 13px;
+  padding: 15px 0 10px 0px;
+  margin-bottom: 20px;
+  border-bottom: solid 1px #e9ecef
+}
+
+.breadcrumb_section .breadcrumb li a {
+  color: #4e4e4e
+}
+
+.breadcrumb_section .breadcrumb li a:hover {
+  color: #0499b8
+}
